@@ -45,7 +45,7 @@ void PrintArr(int[] numbers)
 [-4, -6, 89, 6] -> 0
 */
 
-/*
+
 Console.WriteLine("Введите размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
 int[] numbers = new int[size];
@@ -54,9 +54,14 @@ Console.WriteLine("массив: ");
 PrintArr(numbers);
 int sum = 0;
 
-for (int i = 0; i < numbers.Length; i += 2)
-    sum = sum + numbers[i];
+for (int i = 1; i < numbers.Length; i++)
+{
+    if (i%2!=0)
+    {
+        sum = sum + numbers[i];
+    }
 
+}
 Console.WriteLine($"сумма элементов на нечётных позициях = {sum}");
 
 void randomNumbers(int[] numbers)
@@ -75,7 +80,7 @@ void PrintArr(int[] numbers)
     }
     Console.WriteLine("]");
 }
-*/
+
 
 /*
 Задача 38: Задайте массив вещественных чисел(просто от минус бесконечности, до плюс бесконечности, с дробными не работаем). Найдите разницу между максимальным и минимальным элементов массива.
